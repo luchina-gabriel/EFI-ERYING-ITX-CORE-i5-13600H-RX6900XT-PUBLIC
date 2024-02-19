@@ -1,6 +1,6 @@
-# Rocket Hackintosh - Gigabyte B760M, Core i7 14700KF and AMD RX 6700 XT
+# Powerful ITX Hackintosh, 13600H with RX 6900 XT and DDR5
 
-![Overview](https://github.com/luchina-gabriel/EFI-GIGABYTE-B760M-AORUS-ELITE-Core-i7-14700KF-RX6600-PUBLIC/assets/23700365/75f5b1f6-31a5-4a28-8c2b-453003d334f6)
+![About This Mac 1](https://github.com/luchina-gabriel/EFI-ERYING-ITX-CORE-i5-13600H-RX6900XT-PUBLIC/assets/23700365/26840871-52cd-4854-94d0-b6c4c174ea1d)
 
 # Basic Information
 
