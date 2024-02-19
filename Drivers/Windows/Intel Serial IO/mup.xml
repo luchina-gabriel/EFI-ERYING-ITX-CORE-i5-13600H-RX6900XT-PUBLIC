@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MUPDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.dell.com/openmanage/cm/2/0/mupdefinition.xsd">
+  <packageinformation>
+    <installertype>vendorinstaller</installertype>
+    <mupspecificationversion>3.0.0</mupspecificationversion>
+    <name>Intel Serial IO Driver</name>
+    <packagegrouping>dch_package</packagegrouping>
+    <packagingtype>dch_inf_package</packagingtype>
+    <releasetype>DRVR</releasetype>
+    <subsystem>Chipset</subsystem>
+    <version>30.100.2148.1</version>
+    <AppliesTo>
+      <DeviceInformation>Intel Serial IO</DeviceInformation>
+    </AppliesTo>
+    <supportedoperatingsystems>
+      <osidentifier name="Windows10" architecture="x64" />
+    </supportedoperatingsystems>
+    <content dchSupport="true" baseOSBuildNumber="0">
+      <DeviceGroup supportedOSBuildNumber="0">
+        <Device componentID="103954">
+          <Generic>ACPI\INTC1056</Generic>
+          <Generic>ACPI\INTC1055</Generic>
+          <Image type="DRVR" inftype="base" version="30.100.2148.1">
+            <file>production\Windows10-x64\0\Drivers\WU\iaLPSS2_GPIO2_ADL.inf</file>
+            <supportedoperatingsystems>
+              <osidentifier name="Windows10.0" architecture="x64" buildNumber="0" />
+            </supportedoperatingsystems>
+          </Image>
+        </Device>
+        <Device componentID="103954">
+          <PCIInfo vendorID="8086" deviceID="7ACC" />
+          <PCIInfo vendorID="8086" deviceID="7ACD" />
+          <PCIInfo vendorID="8086" deviceID="7ACE" />
+          <PCIInfo vendorID="8086" deviceID="7ACF" />
+          <PCIInfo vendorID="8086" deviceID="7AFC" />
+          <PCIInfo vendorID="8086" deviceID="7AFD" />
+          <PCIInfo vendorID="8086" deviceID="51E8" />
+          <PCIInfo vendorID="8086" deviceID="51E9" />
+          <PCIInfo vendorID="8086" deviceID="51EA" />
+          <PCIInfo vendorID="8086" deviceID="51EB" />
+          <PCIInfo vendorID="8086" deviceID="51C5" />
+          <PCIInfo vendorID="8086" deviceID="51C6" />
+          <PCIInfo vendorID="8086" deviceID="51D8" />
+          <PCIInfo vendorID="8086" deviceID="51D9" />
+          <Image type="DRVR" inftype="base" version="30.100.2148.1">
+            <file>production\Windows10-x64\0\Drivers\WU\iaLPSS2_I2C_ADL.inf</file>
+            <supportedoperatingsystems>
+              <osidentifier name="Windows10.0" architecture="x64" buildNumber="0" />
+            </supportedoperatingsystems>
+          </Image>
+        </Device>
+        <Device componentID="103954">
+          <PCIInfo vendorID="8086" deviceID="7AAA" />
+          <PCIInfo vendorID="8086" deviceID="7AAB" />
+          <PCIInfo vendorID="8086" deviceID="7AFB" />
+          <PCIInfo vendorID="8086" deviceID="7AF9" />
+          <PCIInfo vendorID="8086" deviceID="51AA" />
+          <PCIInfo vendorID="8086" deviceID="51AB" />
+          <PCIInfo vendorID="8086" deviceID="51FB" />
+          <PCIInfo vendorID="8086" deviceID="51FD" />
+          <PCIInfo vendorID="8086" deviceID="51FE" />
+          <PCIInfo vendorID="8086" deviceID="51DE" />
+          <PCIInfo vendorID="8086" deviceID="51DF" />
+          <Image type="DRVR" inftype="base" version="30.100.2148.1">
+            <file>production\Windows10-x64\0\Drivers\WU\iaLPSS2_SPI_ADL.inf</file>
+            <supportedoperatingsystems>
+              <osidentifier name="Windows10.0" architecture="x64" buildNumber="0" />
+            </supportedoperatingsystems>
+          </Image>
+        </Device>
+        <Device componentID="103954">
+          <PCIInfo vendorID="8086" deviceID="7AA8" />
+          <PCIInfo vendorID="8086" deviceID="7AA9" />
+          <PCIInfo vendorID="8086" deviceID="7AFE" />
+          <PCIInfo vendorID="8086" deviceID="7ADC" />
+          <PCIInfo vendorID="8086" deviceID="51A8" />
+          <PCIInfo vendorID="8086" deviceID="51A9" />
+          <PCIInfo vendorID="8086" deviceID="51C7" />
+          <PCIInfo vendorID="8086" deviceID="51DA" />
+          <PCIInfo vendorID="8086" deviceID="51DB" />
+          <PCIInfo vendorID="8086" deviceID="51DC" />
+          <PCIInfo vendorID="8086" deviceID="51DD" />
+          <Image type="DRVR" inftype="base" version="30.100.2148.1">
+            <file>production\Windows10-x64\0\Drivers\WU\iaLPSS2_UART2_ADL.inf</file>
+            <supportedoperatingsystems>
+              <osidentifier name="Windows10.0" architecture="x64" buildNumber="0" />
+            </supportedoperatingsystems>
+          </Image>
+        </Device>
+      </DeviceGroup>
+    </content>
+  </packageinformation>
+  <executable architecture="x86" timeout="900">
+    <executablename>SetupSerialIO.exe</executablename>
+    <requiredparameters>
+      <commandlineparameter />
+    </requiredparameters>
+  </executable>
+  <behaviors>
+    <behavior name="attended">
+      <vendoroption>
+        <optionvalue switch="" requiresvalue="false" valuedelimiter="" enclose="" />
+      </vendoroption>
+    </behavior>
+    <behavior name="unattended">
+      <vendoroption>
+        <optionvalue switch="/" requiresvalue="false" valuedelimiter="" enclose="">s</optionvalue>
+      </vendoroption>
+    </behavior>
+    <behavior name="freshinstall">
+      <vendoroption>
+        <optionvalue switch="/" requiresvalue="false" valuedelimiter="" enclose="">fresh</optionvalue>
+      </vendoroption>
+    </behavior>
+  </behaviors>
+  <parameters>
+    <parametermapping name="force">
+      <vendoroption>
+        <optionvalue switch="/" requiresvalue="false" valuedelimiter="" enclose="">overwrite</optionvalue>
+      </vendoroption>
+    </parametermapping>
+    <parametermapping name="logfile">
+      <vendoroption>
+        <optionvalue switch="/" requiresvalue="true" valuedelimiter="" enclose="">report </optionvalue>
+      </vendoroption>
+    </parametermapping>
+  </parameters>
+  <returncodes>
+    <returncodemapping name="DEP_SOFT_ERROR">
+      <vendorreturncode>1603</vendorreturncode>
+    </returncodemapping>
+    <returncodemapping name="REBOOT_REQUIRED">
+      <vendorreturncode>3010</vendorreturncode>
+    </returncodemapping>
+    <returncodemapping name="ERROR">
+      <vendorreturncode>1602</vendorreturncode>
+    </returncodemapping>
+    <returncodemapping name="REBOOTING_SYSTEM">
+      <vendorreturncode>1641</vendorreturncode>
+    </returncodemapping>
+    <returncodemapping name="NO_DOWNGRADE">
+      <vendorreturncode>9999</vendorreturncode>
+    </returncodemapping>
+    <returncodemapping name="SUCCESS">
+      <vendorreturncode>0</vendorreturncode>
+    </returncodemapping>
+  </returncodes>
+  <driverarchive>
+    <alldriversroot>.</alldriversroot>
+  </driverarchive>
+</MUPDefinition>

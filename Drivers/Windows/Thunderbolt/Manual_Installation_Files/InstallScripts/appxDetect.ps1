@@ -1,0 +1,1 @@
+Get-AppxPackage AppUp.ThunderboltControlCenter -AllUsers > allPackeges.txt

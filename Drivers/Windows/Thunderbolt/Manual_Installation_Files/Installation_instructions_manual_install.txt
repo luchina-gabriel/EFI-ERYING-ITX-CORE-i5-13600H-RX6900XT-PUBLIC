@@ -1,0 +1,69 @@
+	*****************************************************************
+	*								*
+	*  THUNDERBOLT DRIVER INSTALLATION AND UN-INSTALLATION GUIDE	*
+	*								*
+	*****************************************************************
+	
+
+-- PRE-INSTALLATION --
+
+1. If a previous universal thunderbolt software is installed, uninstall the driver and mark the delete software check box.
+2. Uninstall the Thunderbolt Control Center application via add / remove programs
+3. If the legacy software is installed, uninstall it via add / remove programs or via the legacy thunderbolt installer.
+4. Rescan for devices, you should see that no driver is installed (base device with yellow bang).
+
+
+
+-- PREREQUISITE --
+
+You will need devcon.exe utility on the target computer in order to uninstall.
+To get devcon.exe:
+1. Navigate to "https://docs.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk"
+2. Download the WDK from step 2.
+3. install the WDK (on a different PC).
+4. After the WDK installation is done, navigate to "C:\Program Files (x86)\Windows Kits\10\Tools\x64" to find devcon.exe.
+5. Copy devcon.exe to "C:\Windows\System32" folder.
+6. To install Thunderbolt control center on systems older than RS5, internet connection is required.
+
+
+-- INSTALLATION --
+
+1. In case you want to install the Thunderbolt Control Application (sideload):
+	- Open settings -> update and security -> For developers, and select "Sideload apps" option.
+2. Start command line (CMD) as administrator.
+3. In CMD, navigate to the installation folder and start Setup.bat.
+   In order to install the Thunderbolt Control Application(sideload), please provide "appInstall" parameter
+   e.g. "Setup.bat appInstall"
+4. Once installation is done, a message will be provided to the user upon success or failure.
+5. A log file (TBT_Install.log) will be available in the installation folder.
+
+-- Thunderbolt Control Center preload package installation --
+
+1. Start command line (CMD) as administrator.
+2. In CMD, navigate to the: <installation folder>\ControlCenter\ThunderboltControlApp_preload
+3. Look for a file with a hash like name and .appx extension, e.g. 65ac8e69add5454489da587345d92b32.appx. 
+4. Run DISM command with the application, license and all the dependencies. For example:
+ 	dism /Online /Add-ProvisionedAppxPackage /PackagePath:<APP_HASH_LIKE_NAME>.appx /LicensePath:<APP_HASH_LIKE_NAME>_License1.xml ^ 
+		/DependencyPackagePath:Microsoft.NET.Native.Framework.2.1_2.1.27427.0_arm__8wekyb3d8bbwe.appx ^
+		/DependencyPackagePath:Microsoft.NET.Native.Framework.2.1_2.1.27427.0_x64__8wekyb3d8bbwe.appx ^
+		/DependencyPackagePath:Microsoft.NET.Native.Framework.2.1_2.1.27427.0_x86__8wekyb3d8bbwe.appx ^
+		/DependencyPackagePath:Microsoft.NET.Native.Runtime.2.1_2.1.26424.0_arm__8wekyb3d8bbwe.appx ^
+		/DependencyPackagePath:Microsoft.NET.Native.Runtime.2.1_2.1.26424.0_x64__8wekyb3d8bbwe.appx ^
+		/DependencyPackagePath:Microsoft.NET.Native.Runtime.2.1_2.1.26424.0_x86__8wekyb3d8bbwe.appx ^
+		/DependencyPackagePath:Microsoft.VCLibs.140.00_14.0.27810.0_arm__8wekyb3d8bbwe.appx ^
+		/DependencyPackagePath:Microsoft.VCLibs.140.00_14.0.27810.0_arm64__8wekyb3d8bbwe.appx ^
+		/DependencyPackagePath:Microsoft.VCLibs.140.00_14.0.27810.0_x64__8wekyb3d8bbwe.appx ^
+		/DependencyPackagePath:Microsoft.VCLibs.140.00_14.0.27810.0_x86__8wekyb3d8bbwe.appx
+
+-- UNINSTALL --
+
+1. Start command line (CMD) as administrator.
+2. In CMD, navigate to the installation folder and start Uninstall.bat.
+3. Once uninstallation is done, a message will be provided to the user upon success or failure.
+4. A log file (TBT_Uninstall.log) will be available in the installation folder.
+
+
+-- IMPORTANT NOTE --
+
+Once installation / uninstall is done, make sure to remove devcon.exe from "C:\Windows\System32"
+

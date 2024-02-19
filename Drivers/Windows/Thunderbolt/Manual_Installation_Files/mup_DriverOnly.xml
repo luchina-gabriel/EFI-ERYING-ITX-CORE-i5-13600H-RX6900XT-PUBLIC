@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MUPDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.dell.com/openmanage/cm/2/0/mupdefinition.xsd">
+  <packageinformation>
+    <installertype>vendorinstaller</installertype>
+    <mupspecificationversion>3.0.0</mupspecificationversion>
+    <name>Thunderbolt(TM) Controller</name>
+    <packagegrouping>dch_package</packagegrouping>
+    <packagingtype>dch_inf_package</packagingtype>
+    <releasetype>DRVR</releasetype>
+    <subsystem>Chipset</subsystem>
+    <version>1.41.1353.0</version>
+    <AppliesTo>
+      <DeviceInformation>Thunderbolt(TM) Software</DeviceInformation>
+    </AppliesTo>
+    <supportedoperatingsystems>
+      <osidentifier name="Windows10" architecture="x64" />
+    </supportedoperatingsystems>
+    <content dchSupport="true" baseOSBuildNumber="16299">
+      <DeviceGroup supportedOSBuildNumber="16299">
+        <Device componentID="103992">
+          <PCIInfo vendorID="8086" deviceID="1575" />
+          <PCIInfo vendorID="8086" deviceID="1577" />
+          <PCIInfo vendorID="8086" deviceID="15BF" />
+          <PCIInfo vendorID="8086" deviceID="15D2" />
+          <PCIInfo vendorID="8086" deviceID="15D9" />
+          <PCIInfo vendorID="8086" deviceID="15E8" />
+          <PCIInfo vendorID="8086" deviceID="15EB" />
+          <PCIInfo vendorID="8086" deviceID="1137" />
+          <PCIInfo vendorID="8086" deviceID="1134" />
+          <PCIInfo vendorID="8086" deviceID="15DC" />
+          <PCIInfo vendorID="8086" deviceID="15DD" />
+          <PCIInfo vendorID="8086" deviceID="15DE" />
+          <PCIInfo vendorID="8086" deviceID="8A17" />
+          <PCIInfo vendorID="8086" deviceID="8A0D" />
+          <PCIInfo vendorID="8086" deviceID="8AA3" />
+          <PCIInfo vendorID="8086" deviceID="8AA0" />
+          <PCIInfo vendorID="8086" deviceID="8AB3" />
+          <PCIInfo vendorID="8086" deviceID="8AB0" />
+          <PCIInfo vendorID="8086" deviceID="9A1B" />
+          <PCIInfo vendorID="8086" deviceID="9A1D" />
+          <PCIInfo vendorID="8086" deviceID="9A1F" />
+          <PCIInfo vendorID="8086" deviceID="9A21" />
+          <PCIInfo vendorID="8086" deviceID="463E" />
+          <PCIInfo vendorID="8086" deviceID="466D" />
+          <PCIInfo vendorID="8086" deviceID="7EB2" />
+          <PCIInfo vendorID="8086" deviceID="7EC2" />
+          <PCIInfo vendorID="8086" deviceID="7EC3" />
+		  <PCIInfo vendorID="8086" deviceID="A73E" />
+		  <PCIInfo vendorID="8086" deviceID="A76D" />
+          <Image type="DRVR" inftype="base" version="1.41.1353.0">
+            <file>production\Windows10-x64\16299\Drivers\Drivers\TbtHostController.inf</file>
+            <supportedoperatingsystems>
+              <osidentifier name="Windows10.0" architecture="x64" buildNumber="19041" />
+            </supportedoperatingsystems>
+          </Image>
+        </Device>
+        <Device componentID="103992">
+          <Generic>{5CE5EA10-2048-49BE-9464-C4BA0030122F}\P2P</Generic>
+          <Image type="DRVR" inftype="base" version="1.41.1353.0">
+            <file>production\Windows10-x64\16299\Drivers\Drivers\TbtP2pNdisDrv.inf</file>
+            <supportedoperatingsystems>
+              <osidentifier name="Windows10.0" architecture="x64" buildNumber="16299" />
+            </supportedoperatingsystems>
+          </Image>
+        </Device>
+        <Device componentID="103992">
+          <Generic>SWC\PROVIDER_Intel&amp;&amp;COMPONENT_ThunderboltHSA</Generic>
+          <Image type="DRVR" inftype="component" version="1.41.1353.0">
+            <file>production\Windows10-x64\16299\Drivers\Drivers\TbtHostControllerHsaComponent.inf</file>
+            <supportedoperatingsystems>
+              <osidentifier name="Windows10.0" architecture="x64" buildNumber="16299" />
+            </supportedoperatingsystems>
+          </Image>
+        </Device>
+        <Device componentID="103992">
+          <Generic>SWC\PROVIDER_Intel&amp;&amp;COMPONENT_ThunderboltToast</Generic>
+          <Image type="DRVR" inftype="component" version="1.41.1353.0">
+            <file>production\Windows10-x64\16299\Drivers\Drivers\TbtHostControllerToastComponent.inf</file>
+            <supportedoperatingsystems>
+              <osidentifier name="Windows10.0" architecture="x64" buildNumber="16299" />
+            </supportedoperatingsystems>
+          </Image>
+        </Device>
+        <Device componentID="103992">
+          <Image type="DRVR" inftype="extension" Id="{B4DAA161-39A4-49EA-BC66-7B05A9DDBB16}" delay="0" version="1.41.1353.0">
+            <file>production\Windows10-x64\16299\Drivers\Drivers\TbtHostControllerExtension.inf</file>
+            <supportedoperatingsystems>
+              <osidentifier name="Windows10.0" architecture="x64" buildNumber="16299" />
+            </supportedoperatingsystems>
+          </Image>
+        </Device>
+      </DeviceGroup>
+    </content>
+  </packageinformation>
+  <executable architecture="x86" timeout="900">
+    <executablename>Thunderbolt(TM) Software Installer.exe</executablename>
+    <requiredparameters>
+      <commandlineparameter />
+    </requiredparameters>
+  </executable>
+  <behaviors>
+    <behavior name="unattended">
+      <vendoroption>
+        <optionvalue switch="/" requiresvalue="false" valuedelimiter="" enclose="">install</optionvalue>
+      </vendoroption>
+      <vendoroption>
+        <optionvalue switch="/" requiresvalue="false" valuedelimiter="" enclose="">quiet</optionvalue>
+      </vendoroption>
+      <vendoroption>
+        <optionvalue switch="/" requiresvalue="false" valuedelimiter="" enclose="">norestart</optionvalue>
+      </vendoroption>
+	  <vendoroption>
+        <optionvalue switch="" requiresvalue="false" valuedelimiter="" enclose="">InstallTcc=no</optionvalue>
+      </vendoroption>
+    </behavior>
+    <behavior name="attended">
+      <vendoroption>
+        <optionvalue switch="/" requiresvalue="false" valuedelimiter="" enclose="">install</optionvalue>
+		</vendoroption>
+	  <vendoroption>
+        <optionvalue switch="" requiresvalue="false" valuedelimiter="" enclose="">InstallTcc=no</optionvalue>
+      </vendoroption>
+    </behavior>
+    <behavior name="freshinstall">
+      <vendoroption>
+        <optionvalue switch="" requiresvalue="false" valuedelimiter="" enclose="" />
+      </vendoroption>
+    </behavior>
+  </behaviors>
+  <parameters>
+    <parametermapping name="logfile">
+      <vendoroption>
+        <optionvalue switch="/" requiresvalue="true" valuedelimiter=" " enclose="">log</optionvalue>
+      </vendoroption>
+    </parametermapping>
+  </parameters>
+  <returncodes>
+	<returncodemapping name="SUCCESS">
+      <vendorreturncode>0</vendorreturncode>
+    </returncodemapping>
+    <returncodemapping name="ERROR">
+      <vendorreturncode>1603</vendorreturncode>
+    </returncodemapping>
+    <returncodemapping name="REBOOTING_SYSTEM">
+      <vendorreturncode>1641</vendorreturncode>
+    </returncodemapping>
+    <returncodemapping name="REBOOT_REQUIRED">
+      <vendorreturncode>3010</vendorreturncode>
+    </returncodemapping>
+    <returncodemapping name="ERROR_INSTALL_PLATFORM_UNSUPPORTED">
+      <vendorreturncode>1633</vendorreturncode>
+    </returncodemapping>
+    <returncodemapping name="UNKNOWN_OPTION">
+      <vendorreturncode>1639</vendorreturncode>
+    </returncodemapping>
+  </returncodes>
+  <driverarchive>
+    <alldriversroot>.</alldriversroot>
+  </driverarchive>
+</MUPDefinition>
